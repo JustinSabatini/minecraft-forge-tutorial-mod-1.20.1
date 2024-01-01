@@ -8,6 +8,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.snazzykoala.tutorialmod.TutorialMod;
+import net.snazzykoala.tutorialmod.block.ModBlocks;
 
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
@@ -18,6 +19,7 @@ public class ModCreativeModeTabs {
                     .displayItems(((itemDisplayParameters, output) -> {
                         output.accept(ModItems.CRYSTAL.get());
                         output.accept(ModItems.RAW_CRYSTAL.get());
+                        output.accept(ModBlocks.CRYSTAL_BLOCK.get());
                     }))
                     .build());
 

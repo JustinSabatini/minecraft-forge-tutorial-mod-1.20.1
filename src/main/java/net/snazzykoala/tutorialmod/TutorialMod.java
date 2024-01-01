@@ -12,6 +12,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.snazzykoala.tutorialmod.block.ModBlocks;
 import net.snazzykoala.tutorialmod.item.ModCreativeModeTabs;
 import net.snazzykoala.tutorialmod.item.ModItems;
 import org.slf4j.Logger;
@@ -28,6 +29,8 @@ public class TutorialMod {
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

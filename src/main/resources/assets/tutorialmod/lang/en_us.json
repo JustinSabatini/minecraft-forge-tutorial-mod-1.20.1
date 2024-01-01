@@ -1,5 +1,6 @@
 {
   "item.tutorialmod.crystal": "Crystal",
   "item.tutorialmod.raw_crystal": "Raw Crystal",
+  "block.tutorialmod.crystal_block": "Block of Crystal",
   "creativetab.tutorial_tab": "Crystal Tutorial Tab"
 }
