@@ -13,6 +13,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> CRYSTAL = ITEMS.register("crystal",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RAW_CRYSTAL = ITEMS.register("raw_crystal",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
