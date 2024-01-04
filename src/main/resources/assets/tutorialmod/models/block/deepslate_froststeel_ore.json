@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "tutorialmod:block/crystal_block"
+    "all": "tutorialmod:block/deepslate_froststeel_ore"
   }
 }

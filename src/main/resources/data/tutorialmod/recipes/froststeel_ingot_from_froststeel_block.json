@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "iron_ingot",
+  "ingredients": [
+    {
+      "item": "tutorialmod:froststeel_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "tutorialmod:froststeel_ingot"
+  }
+}

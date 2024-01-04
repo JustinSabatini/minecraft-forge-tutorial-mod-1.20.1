@@ -14,12 +14,17 @@ public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, TutorialMod.MOD_ID);
     public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE_TABS.register("tutorial_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.CRYSTAL.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.FROSTSTEEL_INGOT.get()))
                     .title(Component.translatable("creativetab.tutorial_tab"))
                     .displayItems(((itemDisplayParameters, output) -> {
-                        output.accept(ModItems.CRYSTAL.get());
-                        output.accept(ModItems.RAW_CRYSTAL.get());
-                        output.accept(ModBlocks.CRYSTAL_BLOCK.get());
+                        output.accept(ModItems.FROSTSTEEL_INGOT.get());
+                        output.accept(ModItems.RAW_FROSTSTEEL.get());
+                        output.accept(ModBlocks.FROSTSTEEL_BLOCK.get());
+                        output.accept(ModBlocks.RAW_FROSTSTEEL_BLOCK.get());
+                        output.accept(ModBlocks.FROSTSTEEL_ORE.get());
+                        output.accept(ModBlocks.DEEPSLATE_FROSTSTEEL_ORE.get());
+                        output.accept(ModBlocks.FROSTSTEEL_BRICKS.get());
+                        output.accept(ModBlocks.CRACKED_FROSTSTEEL_BRICKS.get());
                     }))
                     .build());
 

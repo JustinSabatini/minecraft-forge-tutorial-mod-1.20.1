@@ -1,11 +1,11 @@
 {
   "type": "minecraft:smelting",
   "category": "misc",
-  "cookingtime": 200,
+  "cookingtime": 100,
   "experience": 0.1,
   "group": "coal",
   "ingredient": {
-    "item": "tutorialmod:raw_crystal"
+    "item": "tutorialmod:froststeel_bricks"
   },
-  "result": "tutorialmod:crystal"
+  "result": "tutorialmod:cracked_froststeel_bricks"
 }

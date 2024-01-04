@@ -5,7 +5,7 @@
   "experience": 0.1,
   "group": "coal",
   "ingredient": {
-    "item": "tutorialmod:raw_crystal"
+    "item": "tutorialmod:raw_froststeel"
   },
-  "result": "tutorialmod:crystal"
+  "result": "tutorialmod:froststeel_ingot"
 }

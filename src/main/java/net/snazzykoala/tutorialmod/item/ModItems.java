@@ -11,9 +11,9 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, TutorialMod.MOD_ID);
 
-    public static final RegistryObject<Item> CRYSTAL = ITEMS.register("crystal",
+    public static final RegistryObject<Item> FROSTSTEEL_INGOT = ITEMS.register("froststeel_ingot",
             () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> RAW_CRYSTAL = ITEMS.register("raw_crystal",
+    public static final RegistryObject<Item> RAW_FROSTSTEEL = ITEMS.register("raw_froststeel",
             () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {

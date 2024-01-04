@@ -1,6 +1,11 @@
 {
-  "item.tutorialmod.crystal": "Crystal",
-  "item.tutorialmod.raw_crystal": "Raw Crystal",
-  "block.tutorialmod.crystal_block": "Block of Crystal",
-  "creativetab.tutorial_tab": "Crystal Tutorial Tab"
+  "item.tutorialmod.froststeel_ingot": "Froststeel Ingot",
+  "item.tutorialmod.raw_froststeel": "Raw Froststeel",
+  "block.tutorialmod.froststeel_block": "Block of Froststeel",
+  "block.tutorialmod.raw_froststeel_block": "Block of Raw Froststeel",
+  "block.tutorialmod.froststeel_ore": "Froststeel Ore",
+  "block.tutorialmod.deepslate_froststeel_ore": "Deepslate Froststeel Ore",
+  "block.tutorialmod.froststeel_bricks": "Froststeel Bricks",
+  "block.tutorialmod.cracked_froststeel_bricks": "Cracked Froststeel Bricks",
+  "creativetab.tutorial_tab": "Mystic Metals"
 }
