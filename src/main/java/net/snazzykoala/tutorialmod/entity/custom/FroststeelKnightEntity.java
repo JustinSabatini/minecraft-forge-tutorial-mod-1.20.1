@@ -34,6 +34,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.snazzykoala.tutorialmod.entity.ModEntities;
+import net.snazzykoala.tutorialmod.entity.ai.FroststeelKnightAttackGoal;
 import org.checkerframework.checker.units.qual.A;
 
 import java.util.Optional;
@@ -50,6 +51,11 @@ public class FroststeelKnightEntity extends Monster {
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
 
+    public final AnimationState attackAnimationState = new AnimationState();
+    public int attackAnimationTimeout = 0;
+
+
+
     @Override
     public void tick() {
         super.tick();
@@ -61,11 +67,23 @@ public class FroststeelKnightEntity extends Monster {
 
     private void setupAnimationStates(){
         if(this.idleAnimationTimeout <= 0) {
-            this.idleAnimationTimeout = this.random.nextInt(20) + 40;
+            this.idleAnimationTimeout = this.random.nextInt(40) + 80;
             this.idleAnimationState.start(this.tickCount);
         }else{
             --this.idleAnimationTimeout;
         }
+
+        if (this.isAttacking() && attackAnimationTimeout <= 0) {
+            attackAnimationTimeout = 14;
+            attackAnimationState.start(this.tickCount);
+        }else{
+            --this.attackAnimationTimeout;
+        }
+
+        if(!this.isAttacking()) {
+            attackAnimationState.stop();
+        }
+
     }
 
     @Override
@@ -80,26 +98,37 @@ public class FroststeelKnightEntity extends Monster {
 
     }
 
+    public void setAttacking(boolean attacking){
+        this.entityData.set(ATTACKING, attacking);
+    }
+
+    public boolean isAttacking(){
+        return this.entityData.get(ATTACKING);
+    }
+
+    @Override
+    protected void defineSynchedData() {
+        super.defineSynchedData();
+        this.entityData.define(ATTACKING, false);
+    }
+
 
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(1, new FloatGoal(this));
-        this.goalSelector.addGoal(3, new LeapAtTargetGoal(this, 0.2F));
-        this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1.0, false));
-        this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 1.0));
+        this.goalSelector.addGoal(3, new FroststeelKnightAttackGoal(this, 1f, false));
+        this.goalSelector.addGoal(4, new WaterAvoidingRandomStrollGoal(this, 1.0));
         this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 8.0F));
         this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
         this.targetSelector.addGoal(1, (new HurtByTargetGoal(this, new Class[0])).setAlertOthers(new Class[0]));
         this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
     }
 
-    @Override
-    protected float getStandingEyeHeight(Pose pPose, EntityDimensions pDimensions) {return 1.79F;}
 
     public static AttributeSupplier.Builder CreateAttributes() {
         return Monster.createMonsterAttributes()
                 .add(Attributes.MAX_HEALTH, 20)
-                .add(Attributes.MOVEMENT_SPEED, 0.6f)
+                .add(Attributes.MOVEMENT_SPEED, 0.3f)
                 .add(Attributes.ARMOR_TOUGHNESS, 0.1f)
                 .add(Attributes.ATTACK_KNOCKBACK, 0.5f)
                 .add(Attributes.JUMP_STRENGTH, 0.5f)

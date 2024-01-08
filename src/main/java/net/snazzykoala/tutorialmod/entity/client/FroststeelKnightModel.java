@@ -86,8 +86,9 @@ public class FroststeelKnightModel<T extends Entity> extends HierarchicalModel<T
 		this.root().getAllParts().forEach(ModelPart::resetPose);
 		this.applyHeadRotation(netHeadYaw, headPitch, ageInTicks);
 
-		this.animateWalk(ModAnimationDefinitions.WALK_CYCLE, limbSwing, limbSwingAmount, 1f, 1f);
+		this.animateWalk(ModAnimationDefinitions.WALK_CYCLE, limbSwing, limbSwingAmount, 2f, 2f);
 		this.animate(((FroststeelKnightEntity) entity).idleAnimationState, ModAnimationDefinitions.IDLE, ageInTicks, 1f);
+		this.animate(((FroststeelKnightEntity) entity).attackAnimationState, ModAnimationDefinitions.SLASH, ageInTicks, 1f);
 
 	}
 

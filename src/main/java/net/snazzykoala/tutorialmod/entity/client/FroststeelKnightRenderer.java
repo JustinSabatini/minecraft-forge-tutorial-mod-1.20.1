@@ -10,7 +10,7 @@ import net.snazzykoala.tutorialmod.entity.custom.FroststeelKnightEntity;
 
 public class FroststeelKnightRenderer extends MobRenderer<FroststeelKnightEntity, FroststeelKnightModel<FroststeelKnightEntity>> {
     public FroststeelKnightRenderer(EntityRendererProvider.Context pContext) {
-        super(pContext, new FroststeelKnightModel<>(pContext.bakeLayer(ModModelLayers.FROSTSTEEL_KNIGHT_LAYER)), 1f);
+        super(pContext, new FroststeelKnightModel<>(pContext.bakeLayer(ModModelLayers.FROSTSTEEL_KNIGHT_LAYER)), 0.5f);
     }
 
     @Override
