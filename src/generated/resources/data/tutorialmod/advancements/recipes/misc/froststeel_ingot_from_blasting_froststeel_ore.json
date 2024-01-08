@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_froststeel_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "tutorialmod:froststeel_ore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "tutorialmod:froststeel_ingot_from_blasting_froststeel_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_froststeel_ore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "tutorialmod:froststeel_ingot_from_blasting_froststeel_ore"
+    ]
+  },
+  "sends_telemetry_event": false
+}

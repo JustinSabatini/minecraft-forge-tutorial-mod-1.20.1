@@ -1,6 +1,9 @@
 {
   "item.tutorialmod.froststeel_ingot": "Froststeel Ingot",
+  "item.tutorialmod.froststeel_nugget": "Froststeel Nugget",
+  "item.tutorialmod.metal_detector": "Metal Detector",
   "item.tutorialmod.raw_froststeel": "Raw Froststeel",
+  "item.tutorialmod.froststeel_steak": "Froststeel Steak",
   "block.tutorialmod.froststeel_block": "Block of Froststeel",
   "block.tutorialmod.raw_froststeel_block": "Block of Raw Froststeel",
   "block.tutorialmod.froststeel_ore": "Froststeel Ore",

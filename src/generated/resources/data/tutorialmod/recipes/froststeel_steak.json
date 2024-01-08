@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "tutorialmod:froststeel_nugget"
+    },
+    "X": {
+      "item": "minecraft:cooked_beef"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "SXS",
+    "SSS"
+  ],
+  "result": {
+    "item": "tutorialmod:froststeel_steak"
+  },
+  "show_notification": true
+}

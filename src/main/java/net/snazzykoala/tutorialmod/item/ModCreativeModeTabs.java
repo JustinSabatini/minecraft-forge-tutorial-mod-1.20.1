@@ -18,6 +18,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.tutorial_tab"))
                     .displayItems(((itemDisplayParameters, output) -> {
                         output.accept(ModItems.FROSTSTEEL_INGOT.get());
+                        output.accept(ModItems.FROSTSTEEL_NUGGET.get());
                         output.accept(ModItems.RAW_FROSTSTEEL.get());
                         output.accept(ModBlocks.FROSTSTEEL_BLOCK.get());
                         output.accept(ModBlocks.RAW_FROSTSTEEL_BLOCK.get());
@@ -25,6 +26,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.DEEPSLATE_FROSTSTEEL_ORE.get());
                         output.accept(ModBlocks.FROSTSTEEL_BRICKS.get());
                         output.accept(ModBlocks.CRACKED_FROSTSTEEL_BRICKS.get());
+                        output.accept(ModItems.METAL_DETECTOR.get());
+                        output.accept(ModItems.FROSTSTEEL_STEAK.get());
+                        output.accept(ModItems.FROSTSTEEL_KNIGHT_SPAWN_EGG.get());
                     }))
                     .build());
 

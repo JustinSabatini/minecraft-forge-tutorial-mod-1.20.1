@@ -1,6 +1,7 @@
 package net.snazzykoala.tutorialmod;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -13,6 +14,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.snazzykoala.tutorialmod.block.ModBlocks;
+import net.snazzykoala.tutorialmod.entity.ModEntities;
+import net.snazzykoala.tutorialmod.entity.client.FroststeelKnightRenderer;
 import net.snazzykoala.tutorialmod.item.ModCreativeModeTabs;
 import net.snazzykoala.tutorialmod.item.ModItems;
 import org.slf4j.Logger;
@@ -31,6 +34,8 @@ public class TutorialMod {
         ModItems.register(modEventBus);
 
         ModBlocks.register(modEventBus);
+
+        ModEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -61,7 +66,7 @@ public class TutorialMod {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            EntityRenderers.register(ModEntities.FROSTSTEEL_KNIGHT.get(), FroststeelKnightRenderer::new);
         }
     }
 }
